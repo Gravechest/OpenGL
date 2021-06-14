@@ -1,0 +1,5 @@
+const char* fragshaderSource = "#version 330 core\n"
+"out vec4 FragColor;"
+"void main(){"
+"FragColor = vec4(0.5,0.0,0.0,1.0);"
+"}";
