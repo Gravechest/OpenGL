@@ -1,9 +1,11 @@
 #version 460 core
 
-out vec4 FragColor;
+layout (location = 0) in vec2 verticles;
+layout (location = 1) in vec2 textcoords;
 
-in vec2 TextCoords;
+out vec2 TextCoords;
 
 void main(){
-	FragColor.r = 1.0-distance(TextCoords,vec2(0.5))*2.0;
+	TextCoords = textcoords;
+	gl_Position = vec4(vec2(verticles),0.0,1.0);
 }
